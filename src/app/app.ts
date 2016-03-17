@@ -13,7 +13,8 @@ import {Navbar} from "./layout/navbar.component";
 })
 @View({
     directives: [ROUTER_DIRECTIVES, RouterOutlet, Home, Navbar, Footer],
-    templateUrl: "app/app.html"
+    templateUrl: "app/app.html",
+    styleUrls: ["app/app.css"]
 })
 
 @RouteConfig([

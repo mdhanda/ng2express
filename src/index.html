@@ -25,22 +25,6 @@
 
         <!-- //configure system loader -->
         <script src="config.js"></script>
-        <script>
-            System.config({
-                defaultJSExtensions: true,
-                paths: {
-                    'rxjs/operator/*' : './rxjs/add/operator/*',
-                    'semantic-ui/dist/components/*': 'semantic/dist/components/*.js',
-                    '*': './*'
-                },
-                packages: {
-                    app: {
-                        format: 'register',
-                        defaultExtension: 'js',
-                    }
-                }
-            });
-        </script>
     </head>
 
     <body>

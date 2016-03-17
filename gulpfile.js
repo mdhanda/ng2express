@@ -19,12 +19,12 @@ var paths = {
     typescript: config.allTs,
     typings: config.typings,
     html: config.allHtml,
+    css: config.allCss,
     images: config.allImages,
     json: config.allJson,
     js: config.allJs,
     sass: './src/**/*.scss',
     less: './src/**/*.less',
-    css: '.src/**/*.css',
     assets: config.allAssets,
     vendor: {
         semantic: {
@@ -43,6 +43,12 @@ gulp.task('html', function () {
         .pipe(gulp.dest(paths.dirs.build));
 });
 
+gulp.task('css', function () {
+    return gulp.src(paths.css, { base: 'src' })
+        .pipe(gulp.dest(paths.dirs.build))
+        .pipe(browserSync.reload({stream:true}));
+});
+
 /*
 gulp.task('json', function () {
     return gulp.src(paths.json)
@@ -52,12 +58,6 @@ gulp.task('json', function () {
 gulp.task('js', function () {
     return gulp.src(paths.js)
         .pipe(gulp.dest(paths.dirs.build));
-});
-
-gulp.task('css', function () {
-    return gulp.src(paths.css)
-        .pipe(gulp.dest(paths.dirs.build))
-        .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('images', function () {
@@ -112,7 +112,7 @@ gulp.task('compile-ts', function() {
 });
 
 //gulp.task('copy', gulp.parallel('html', 'json', 'js', 'css', 'images', 'assets'));
-gulp.task('copy', gulp.parallel('html',  'assets'));
+gulp.task('copy', gulp.parallel('html', 'css',  'assets'));
 gulp.task('copy-all', gulp.parallel('copy', 'semantic'));
 gulp.task('build', gulp.series('clean', 'copy-all', 'ts-lint', 'compile-ts'));
 
