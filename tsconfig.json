@@ -1,11 +1,12 @@
 {
-    "version": "1.5.3",
+    "version": "1.8.2",
     "compilerOptions": {
         "target": "es5",
-        "module": "commonjs",
+        "module": "system",
         "removeComments": true,
         "emitDecoratorMetadata": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "moduleResolution": "node"
     },
     "exclude": [
         "node_modules",

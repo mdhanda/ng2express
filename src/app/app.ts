@@ -13,18 +13,7 @@ import {Navbar} from "./layout/navbar.component";
 })
 @View({
     directives: [ROUTER_DIRECTIVES, RouterOutlet, Home, Navbar, Footer],
-    template: `
-    <navbar></navbar>
-
-    <div class="center">
-        <img src='https://angular.io/resources/images/logos/standard/shield-large.png'>
-        <img [src]="angularLogo" width="10%">
-    </div>
-    <home></home>
-
-    <footer></footer>
-    <router-outlet></router-outlet>`,
-    styleUrls: ["app.css"]
+    templateUrl: "app/app.html"
 })
 
 @RouteConfig([
