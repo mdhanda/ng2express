@@ -1,5 +1,5 @@
 {
-  "name": "angular2-express-starter",
+  "name": "angular2-nodejs",
   "version": "1.0.0",
   "description": "Starter application of Angular2 on Express",
   "main": "gulpfile.js",
@@ -9,7 +9,7 @@
     "start": "node ./server/bin/www",
     "postinstall": "gulp"
   },
-  "author": "Vlado Tešanović",
+  "author": "MD",
   "license": "MIT",
   "dependencies": {
     "angular2": "2.0.0-beta.9",
